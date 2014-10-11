@@ -163,60 +163,80 @@ header
 
 .history
   padding-top: 60px
-  background: #090505
+  background: #fff
   +box
   +clr
   .history_in
     @extend %in
-    padding-top: 50px
+    width: 980px
+    padding-top: 35px
     +clr
   .history__block
     margin-top: 0
     +clr
-    .history__block--left
-      float: left
-      width: 700px
+    .history__block--right
+      float: right
+      width: 640px
       +clr
       p
         font-size: 18px
         margin-bottom: 28px
-        color: #ffffff
+        color: #1e1e1e
         +pfl
         line-height: 1.5em
 
-    .history__block--right
-      float: right
-      width: 290px
+    .history__block--left
+      float: left
+      width: 320px
       +clr
+      a
+        text-decoration: none
+        color: inherit
+
       .history__img
         position: relative
         display: block
-        width: 290px
-        height: 369px
+        width: 320px
+        height: 200px
+        text-align: center
         +clr
-        +transition(all .5s)
+        p
+          color: #1e1e1e
+          font-size: 14px
+          font-family: 'conv_segoeprintregular'
+          text-decoration: none
+          letter-spacing: -1px
+          padding-top: 10px
         &:hover
-          +opacity(.7)
+          text-decoration: underline
         img
           display: block
         .history__video
           position: absolute
-          top: 40px
-          left: 93px
-          color: #ffffff
-          font-family: 'conv_segoeprintregular'
-          font-size: 14px
-          +s(video_ico)
-          text-align: center
-          padding-top: 100px
-          +box
+          top: 0
+          bottom: 0
+          right: 0
+          left: 0
+          background: rgba(#000, .6)
+          +opacity(0)
+          +border-radius(5px)
+          +transition(all .5s)
+          &:before
+            position: absolute
+            content: ""
+            +s(play)
+            top: 50%
+            left: 50%
+            +transform(translate(-50%, -50%))
+        &:hover
+          .history__video
+            +opacity(1)
+
 
 
 .specs
-  background: url(../img/specs_bg.jpg) center center no-repeat
-  +background-size(cover)
-  height: 910px
-  padding-top: 90px
+  background: #ffffff
+  padding-top: 70px
   +clr
   +box
   h2
@@ -226,47 +246,75 @@ header
     width: 960px
     +clr
   &__items
-    float: right
-    width: 460px
+    float: left
+    width: 290px
     font-size: 18px
-    margin-right: 10px
-    padding-left: 30px
+    margin-left: 160px
     padding-bottom: 40px
     +box
-    +background-image(linear-gradient(to bottom left, #000 0%, rgba(40,30,30,.9) 100%))
     &.short
       width: 220px
 
 
   &__item
-    color: #736464
-    margin-top: 30px
+    color: #5a5a5a
+    margin-top: 28px
     font-family: 'conv_pfdintextcondpro-light'
     font-size: 16px
+    &:first-child
+      margin-top: 0
 
     span
-      color: #ffffff
+      color: #1e1e1e
       font-size: 18px
-      text-transform: uppercase
+      text-transform: none
 
   &__watch
+    margin-top: 10px
     position: relative
     float: left
-    width: 450px
-    margin-right: 20px
-    margin-top: 45px
+    width: 320px
+    margin-left: 150px
+
     img
-      width: 450px
-      height: 625px
+      width: 320px
+      height: 520px
       position: relative
       display: block
-
+    .prev
+      position: absolute
+      content: ""
+      +s(specs_prev--grey)
+      top: 45%
+      left: -100px
+      cursor: pointer
+      &:hover
+        +s(specs_prev)
+    .next
+      position: absolute
+      content: ""
+      +s(specs_next--grey)
+      top: 45%
+      right: -100px
+      cursor: pointer
+      &:hover
+        +s(specs_next)
+    .threesixty
+      position: absolute
+      text-align: center
+      padding-top: 35px
+      +box
+      top: 15px
+      right: -70px
+      +s(360)
+      font-size: 36px
+      color: #aa2828
+      content: ""
+      font-family: 'code_pro_boldregular'
 
 
 
 .photos
-  background: #271d1d
-  height: 200px
   padding: 10px 0
   +box
   +clr
