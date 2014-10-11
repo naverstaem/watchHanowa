@@ -315,19 +315,19 @@ header
 
 
 .photos
-  padding: 10px 0
+  padding: 35px 0
   +box
   +clr
   .photos_in
     @extend %in
-    width: 1000px
+    width: 1005px
   .photo__item
     position: relative
     display: inline-block
-    width: 320px
-    height: 180px
+    width: 330px
+    height: 200px
     vertical-align: top
-    margin-right: 15px
+    margin-right: 1px
     &:last-child
       margin-right: 0
     span
@@ -336,8 +336,9 @@ header
       left: 0
       right: 0
       bottom: 0
-      background: rgba(#271d1d, .8)
+      background: rgba(#000, .7)
       +opacity(0)
+      z-index: 1
       +transition(background, .5s)
       &:after
         position: absolute
@@ -349,58 +350,37 @@ header
 
       &:hover
         +opacity(1)
-
     img
       display: block
 
-
-
-
-
-
-
-.reviews
-  +clr
-  margin-top: 65px
-  padding-bottom: 60px
-  h2
-    margin-bottom: 35px
-  .reviews_in
-    @extend %in
-    +clr
-  .review__item
-    +background-clip(padding-box)
-    width: 300px
-    position: relative
-    display: inline-block
-    margin-right: 42px
-    +border-radius(8px)
-    +background-clip(padding-box)
-    padding: 18px
-    background: #efebe1
-    +box-shadow(inset 0 -2px 0 rgba(0,0,0,.1))
-    +box
-    +clr
-    &:last-child
-      margin-right: 0
-    &:after
-      position: absolute
-      content: ""
-      bottom: -34px
-      left: 15px
-      +s(review_popup)
-
-    h3
-      color: #3c3c3c
-      font-size: 18px
-      font-family: 'conv_pfdintextcondpro-light'
-      text-transform: uppercase
-      margin-bottom: 10px
-      font-weight: normal
-    p
-      +pfl
-      color: #3c3c3c
-      font-size: 16px
+.slick-prev, .slick-next
+  position: absolute
+  content: ''
+  top: 14px
+  left: 0
+  width: 330px
+  height: 200px
+  +transition(background, .5s)
+  &:hover
+    +background-image(linear-gradient(to right, rgba(#fff,1), rgba(#fff,0)))
+  &:before
+    position: absolute
+    content: ""
+    top: 38%
+    left: 0
+    +s(prev_ico)
+.slick-next
+  right: 0
+  left: auto
+  &:hover
+    +background-image(linear-gradient(to right, rgba(#fff,0), rgba(#fff, 1)))
+  &:before
+    position: absolute
+    content: ""
+    top: 38%
+    right: 5px
+    left: auto
+    +s(next_ico)
 
 
 .our
@@ -420,11 +400,7 @@ header
     line-height: 1em
     text-transform: uppercase
   h2
-    line-height: 1em
-    span
-      font-family: 'conv_pfdintextcondpro-thin'
-      font-size: 36px
-
+    color: white
 
   .our_in
     @extend %in
@@ -486,82 +462,125 @@ header
       content: ""
       +s(bubble_ico)
 
+
+.reviews
+  +clr
+  margin-top: 65px
+  padding-bottom: 60px
+  h2
+    margin-bottom: 35px
+  .reviews_in
+    @extend %in
+    +clr
+  .review__item
+    +background-clip(padding-box)
+    width: 300px
+    position: relative
+    display: inline-block
+    margin-right: 42px
+    +border-radius(8px)
+    +background-clip(padding-box)
+    padding: 18px
+    background: #efefef
+    +box
+    +clr
+    &:last-child
+      margin-right: 0
+    &:after
+      position: absolute
+      content: ""
+      bottom: -34px
+      left: 15px
+      +s(review_popup)
+
+    h3
+      color: #3c3c3c
+      font-size: 18px
+      font-family: 'conv_pfdintextcondpro-light'
+      text-transform: uppercase
+      margin-bottom: 10px
+      font-weight: normal
+    p
+      +pfl
+      color: #3c3c3c
+      font-size: 16px
+
+
+
+
 .order
   margin-top: 40px
   padding-bottom: 40px
   .order_in
     @extend %in
   h2
-    margin-bottom: 40px
+    margin-bottom: 30px
   &__item
+    background: url("../img/order-item_bg--grey.png") no-repeat
     vertical-align: top
-    width: 320px
-    +background-clip(padding-box)
-    border: solid 4px rgb(230,230,230)
+    width: 300px
+    height: 715px
     text-align: center
-    padding-top: 20px
-    padding-bottom: 20px
+    padding-top: 25px
     display: inline-block
-    margin-right: 14px
+    margin-right: 45px
+    &.item--first
+      background: url(../img/order-item_bg.png) no-repeat
     +box
     &:last-child
       margin-right: 0
   &__caption
-    font-size: 36px
-    font-family: 'pf_highway_sans_prolight'
-    margin-bottom: 95px
-    color: #281e1e
+    font-size: 24px
+    font-family: 'conv_pfdintextcondpro-light'
+    margin-bottom: 20px
+    color: #1e1e1e
+    text-transform: uppercase
   &__img
     display: inline-block
-    margin-bottom: 75px
-    width: 250px
-    height: 85px
+    margin-bottom: 15px
+    width: 170px
+    height: 308px
     img
       display: block
   &__price
-    background: url(../img/price-order_bg.png) no-repeat
-    width: 320px
-    height: 80px
     +box
-    margin-left: -4px
+    line-height: 2em
+
 
     h3
-      font-family: 'conv_pfdintextcondpro-regular'
-      font-size: 48px
+      font-family: 'code_pro_lcregular'
+      font-size: 36px
       font-weight: normal
-      color: #ffffff
-      margin-left: 50px
-      margin-top: 6px
-      float: left
+      color: #be0a0a
       span
-        font-family: 'als_rublregular'
-        font-size: 24px
+        font-family: 'conv_pfdintextcondpro-light'
+        font-size: 18px
     h4
-      color: #736464
-      font-size: 24px
+      color: #787878
+      font-size: 18px
       font-family: 'conv_pfdintextcondpro-light'
       font-weight: normal
-      float: right
-      margin-top: 23px
-      margin-right: 40px
   &__text
     padding: 20px 15px 0
     font-size: 16px
     color: #787878
     text-align: left
   &__form
-    margin-top: 35px
+    margin-top: -5px
     input
       width: 250px
       margin-bottom: 10px
+      border: 2px solid #dbdbdb
+      +border-radius(4px)
     .button
 
 
 
 .bottom
-  height: 840px
+  height: 880px
   @extend header
-  padding-top: 0
+  padding-top: 190px
+  background: url(../img/bottom_bg.jpg) no-repeat center center
   .header__main--main_in--bottom
     margin-top: 55px !important
 
@@ -576,7 +595,7 @@ footer
     font-size: 16px
     color: #787878
     a
-      color: #be0a0a
+      color: #5078b4
       &:hover
         text-decoration: none
 

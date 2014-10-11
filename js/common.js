@@ -51,7 +51,10 @@ head.ready(function() {
 //            $(".fancybox-skin").css("boxShadow","none");
 //        }
     });
-
+    $('.slick').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
 //
 //    $('.fancybox').fancybox({
 //        padding: 0,
@@ -70,6 +73,7 @@ head.ready(function() {
 //        }
 //    });
 //////////////////////without close button
+
 
 //////////////////////////////////////////////////
 //more reviews show, when clicked

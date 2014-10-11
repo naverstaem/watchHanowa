@@ -299,3 +299,14 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'code_pro_lcregular';
+    src: url('fonts/code_pro_lc-webfont.eot');
+    src: url('fonts/code_pro_lc-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/code_pro_lc-webfont.woff2') format('woff2'),
+    url('fonts/code_pro_lc-webfont.woff') format('woff'),
+    url('fonts/code_pro_lc-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
