@@ -155,7 +155,7 @@ header .header__main--main .price .price--new span, .bottom .header__main--main 
 header .header__main--main .header__right, .bottom .header__main--main .header__right { position: relative; float: right; margin-top: 10px; z-index: 2; *zoom: 1; }
 header .header__main--main .header__right:after, .bottom .header__main--main .header__right:after { content: " "; display: table; clear: both; }
 
-.scrollMenu { position: fixed; z-index: 999; width: 100%; top: 0; left: 0; bottom: auto; display: none; height: 60px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background: rgba(0, 0, 0, 0.8); }
+.scrollMenu { position: fixed; z-index: 999; width: 100%; top: 0; left: 0; bottom: auto; display: none; height: 60px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background: rgba(239, 239, 245, 0.8); }
 .scrollMenu .header_in { padding-top: 20px; }
 .scrollMenu .top, .scrollMenu .scrollMenu { height: 0; }
 
@@ -262,7 +262,7 @@ header .header__main--main .header__right:after, .bottom .header__main--main .he
 .bottom { height: 880px; padding-top: 190px; background: url(../img/bottom_bg.jpg) no-repeat center center; }
 .bottom .header__main--main_in--bottom { margin-top: 55px !important; }
 
-footer { box-sizing: border-box; height: 100px; text-align: center; padding-top: 20px; }
+footer { box-sizing: border-box; height: 84px; text-align: center; padding-top: 12px; }
 footer p { font-size: 16px; color: #787878; }
 footer p a { color: #5078b4; }
 footer p a:hover { text-decoration: none; }

@@ -3,15 +3,15 @@ head.ready(function() {
 	// $(document).on("click", function(){
 	// 	$(".js-popup").hide();
 	// });
-//   $(window).scroll(function () {
-//       if ( $(this).scrollTop() > 200 && !$('.scrollMenu').hasClass('open') ) {
-//           //$('.scrollMenu').addClass('open');
-//           $('.scrollMenu').slideDown();
-//       } else if ( $(this).scrollTop() <= 200 ) {
-//           //$('.scrollMenu').removeClass('open');
-//           $('.scrollMenu').slideUp();
-//       }
-//   });
+   $(window).scroll(function () {
+       if ( $(this).scrollTop() > 200 && !$('.scrollMenu').hasClass('open') ) {
+           //$('.scrollMenu').addClass('open');
+           $('.scrollMenu').slideDown();
+       } else if ( $(this).scrollTop() <= 200 ) {
+           //$('.scrollMenu').removeClass('open');
+           $('.scrollMenu').slideUp();
+       }
+   });
 //    jQuery(document).ready(function($) {
 //        var nav = $('.menu');
 //
@@ -42,7 +42,7 @@ head.ready(function() {
         helpers:{
             overlay: {
                 locked: false,
-                css:{'background' : 'rgba(#271d1d, 0.8)'}
+                css:{'background' : 'rgba(#000000, 0.6)'}
             }
         }
 //        ,
